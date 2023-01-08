@@ -1,0 +1,157 @@
+[gd_scene load_steps=12 format=3 uid="uid://b06ogdp4cxykn"]
+
+[ext_resource type="Script" path="res://game/world.gd" id="1_7blre"]
+[ext_resource type="PackedScene" uid="uid://c3yaoilcarlp2" path="res://models/lamp.glb" id="3_wwmjy"]
+[ext_resource type="PackedScene" uid="uid://ginuefs302ow" path="res://env.tscn" id="4_hunjc"]
+[ext_resource type="PackedScene" uid="uid://osvnvo4tr547" path="res://models/tree.glb" id="5_1ljb5"]
+[ext_resource type="PackedScene" uid="uid://bg5gk8xs58jqt" path="res://models/Terrain.glb" id="6_gthwp"]
+[ext_resource type="PackedScene" uid="uid://becr0j4etdl1k" path="res://preview_camera.tscn" id="6_jnuw3"]
+[ext_resource type="PackedScene" uid="uid://b0lbrenyhxye2" path="res://models/stick.glb" id="8_3i7n1"]
+[ext_resource type="PackedScene" uid="uid://djfoce6ux7wti" path="res://models/rock2.glb" id="9_glqiv"]
+[ext_resource type="PackedScene" uid="uid://cdg0qw5s1uqll" path="res://components/mushroom_position.tscn" id="10_2yprq"]
+[ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="10_ny4ym"]
+[ext_resource type="Texture2D" uid="uid://d1q6u3bd2m15t" path="res://assets/images/mushroom_png.png" id="11_f0u7b"]
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_7blre")
+
+[node name="Env" parent="." instance=ExtResource("4_hunjc")]
+unique_name_in_owner = true
+
+[node name="Positions" type="Node3D" parent="."]
+
+[node name="MushroomPosition6" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.12472, -0.752732, -17.0667)
+
+[node name="MushroomPosition7" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(-0.772922, -0.493449, 0.398874, 0, 0.628643, 0.777696, -0.634501, 0.601098, -0.485892, -22.2299, 17.4585, 6.23288)
+
+[node name="MushroomPosition14" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(-0.772922, -0.493449, 0.398874, 0, 0.628643, 0.777696, -0.634501, 0.601098, -0.485892, -22.2299, 26.5035, 6.23288)
+
+[node name="MushroomPosition13" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(-0.772922, -0.493449, 0.398874, -0.596482, 0.779419, -0.191619, -0.216336, -0.386028, -0.896763, -14.2986, 27.4896, -0.113182)
+
+[node name="MushroomPosition5" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(1, 0, 0, 0, 0.827953, 0.560798, 0, -0.560798, 0.827953, -20.2611, 12.4246, 3.49087)
+
+[node name="MushroomPosition12" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(0.624275, 0.6468, 0.438098, -0.781205, 0.51687, 0.350092, 4.35666e-09, -0.560798, 0.827953, -22.2169, 25.5744, 2.56824)
+
+[node name="MushroomPosition4" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(0.384811, 0, -0.922995, 0, 1, 0, 0.922995, 0, 0.384811, -24.2928, 1.77929, 29.9005)
+
+[node name="MushroomPosition9" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.9916, -3.93183, 47.8429)
+
+[node name="MushroomPosition8" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(0.805587, 0.592477, 0, -0.592477, 0.805587, 0, 0, 0, 1, -34.7411, 1.44481, 52.534)
+
+[node name="MushroomPosition15" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(0.985653, 0.168782, 0, -0.168782, 0.985653, 0, 0, 0, 1, -34.7411, 2.55824, 44.6464)
+
+[node name="MushroomPosition" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(0.273959, 0, 0.961741, 0, 1, 0, -0.961741, 0, 0.273959, -5.6194, -2.08565, 25.8963)
+
+[node name="MushroomPosition10" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(-0.459967, 0, 0.887936, 0, 1, 0, -0.887936, 0, -0.459967, -5.6194, -0.00212026, 7.52457)
+
+[node name="MushroomPosition11" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(-0.276157, 0, 0.961112, 0, 1, 0, -0.961112, 0, -0.276157, -16.9384, 1.32136, 15.3422)
+
+[node name="MushroomPosition3" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(0.107566, 0, -0.994198, 0, 1, 0, 0.994198, 0, 0.107566, -18.2571, 1.91396, 4.88998)
+
+[node name="MushroomPosition2" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(-0.136355, 0, -0.99066, 0, 1, 0, 0.99066, 0, -0.136355, 6.9903, -3.43908, 3.18427)
+
+[node name="PreviewCamera" parent="." instance=ExtResource("6_jnuw3")]
+show_instructions_b = true
+
+[node name="lamp" parent="." instance=ExtResource("3_wwmjy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.2137, 0, 40.6209)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="lamp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.02635, 23.246, -0.358925)
+light_energy = 9.438
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 5.782
+light_size = 1.0
+shadow_enabled = true
+omni_range = 18.432
+omni_attenuation = 0.482969
+
+[node name="OmniLight3D" type="OmniLight3D" parent="lamp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.271996, 19.5515, -1.62378)
+light_color = Color(0.996078, 1, 0.65098, 1)
+light_energy = 9.347
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 1.0
+shadow_enabled = true
+omni_range = 93.4347
+omni_attenuation = 0.482969
+
+[node name="tree" parent="." instance=ExtResource("5_1ljb5")]
+transform = Transform3D(1.12878, 0, 0.987857, 0, 1.5, 0, -0.987857, 0, 1.12878, -22.0784, 0, 4.98864)
+
+[node name="Terrain" parent="." instance=ExtResource("6_gthwp")]
+transform = Transform3D(0.437916, 0, -0.899016, 0, 1, 0, 0.899016, 0, 0.437916, -25.8905, 0, 0)
+
+[node name="rock5" parent="." instance=ExtResource("9_glqiv")]
+transform = Transform3D(-0.743664, 1.49155, -1.10555, 1.08617, 1.31539, 1.04402, 1.50572, -0.212209, -1.29914, -15.4473, 3.28187, -2.30867)
+
+[node name="rock4" parent="." instance=ExtResource("9_glqiv")]
+transform = Transform3D(1.85724, 3.42842, 3.12995, -0.404266, 3.47778, -3.56954, -4.62463, 1.07283, 1.56901, -41.1665, 8.86141, 54.3002)
+
+[node name="rock6" parent="." instance=ExtResource("9_glqiv")]
+transform = Transform3D(14.049, 4.43098, -20.1988, 19.3392, -11.4625, 10.9365, -7.32281, -21.771, -9.86908, 18.7612, 2.75289, -49.3132)
+
+[node name="rock3" parent="." instance=ExtResource("9_glqiv")]
+transform = Transform3D(4.79431, -1.01497, -0.992187, 0.875804, 4.86589, -0.745703, 1.11695, 0.541232, 4.8435, -22.2458, 8.24082, 17.4425)
+
+[node name="stick" parent="." instance=ExtResource("8_3i7n1")]
+transform = Transform3D(-0.944712, 0.382825, 1.72075, 0.0778379, 1.95942, -0.39319, -1.7611, -0.118757, -0.940443, -3.79207, 0.821378, -4.66025)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0941779, 0.995555, 0, -0.995555, 0.0941779, 32.9956, 56.4148, 24.2169)
+light_color = Color(0.988235, 0.988235, 0.964706, 1)
+light_energy = 0.0
+light_volumetric_fog_energy = 0.0
+shadow_bias = 0.718
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("10_ny4ym")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 1041.0
+offset_top = 19.0
+offset_right = 1131.0
+offset_bottom = 109.0
+texture = ExtResource("11_f0u7b")
+ignore_texture_size = true
+
+[node name="ScoreAsText" type="RichTextLabel" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 1065.0
+offset_top = 111.0
+offset_right = 1332.0
+offset_bottom = 159.0
+theme_override_font_sizes/normal_font_size = 38
+text = "0/0
+"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 990.0
+offset_top = 110.0
+offset_right = 1075.0
+offset_bottom = 158.0
+theme_override_font_sizes/normal_font_size = 38
+text = "Found: "

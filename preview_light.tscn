@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cop7llo3sge8y"]
+
+[node name="PreviewLight" type="OmniLight3D"]
+transform = Transform3D(1, 7.45058e-09, 0, -8.3819e-09, 1, 1.39698e-09, 0, -4.65661e-09, 1, -0.603672, 0.229966, -1.59676)
+light_color = Color(0.933333, 0.933333, 0.686275, 1)
+light_energy = 3.202
+light_volumetric_fog_energy = 0.0
+omni_range = 9.8409

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2agbylt7ykh0"]
+
+[ext_resource type="PackedScene" uid="uid://c6okcu6t4eilu" path="res://models/OysterMushroom.glb" id="1_cgafh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x2041"]
+radius = 1.81111
+height = 5.01817
+
+[node name="OysterMushroom" instance=ExtResource("1_cgafh")]
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.19648, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.10025, 0)
+shape = SubResource("CapsuleShape3D_x2041")

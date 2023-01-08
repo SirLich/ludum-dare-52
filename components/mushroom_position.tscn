@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cdg0qw5s1uqll"]
+
+[node name="MushroomPosition" type="Marker3D" groups=["mushroom_pos"]]
+gizmo_extents = 1.51

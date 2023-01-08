@@ -1,0 +1,107 @@
+[gd_scene load_steps=9 format=3 uid="uid://c3v40trfvsil7"]
+
+[ext_resource type="PackedScene" uid="uid://ginuefs302ow" path="res://env.tscn" id="1_bj5yx"]
+[ext_resource type="Script" path="res://game/main_menu/main_menu.gd" id="1_bk7e3"]
+[ext_resource type="PackedScene" uid="uid://b2agbylt7ykh0" path="res://scenes/mushrooms/oyster_mushroom.tscn" id="1_q4rvp"]
+[ext_resource type="PackedScene" uid="uid://jqxjy6c7khav" path="res://scenes/mushrooms/cap_mushroom.tscn" id="2_7pl7x"]
+[ext_resource type="PackedScene" uid="uid://b3037fr2ytkjb" path="res://game/preview_world.tscn" id="2_pqvxd"]
+[ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="6_7fcn0"]
+[ext_resource type="FontFile" uid="uid://k2gc7slwe1mb" path="res://assets/fonts/Moon Flower Bold.ttf" id="7_ia7dj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_r8aoy"]
+
+[node name="MainMenu" type="Node3D"]
+script = ExtResource("1_bk7e3")
+previewScene = ExtResource("2_pqvxd")
+
+[node name="OysterMushroom" parent="." instance=ExtResource("1_q4rvp")]
+transform = Transform3D(-1.88203, 0.308065, -2.31583, 0.194289, 2.98414, 0.239073, 2.32814, -3.35276e-08, -1.89203, -3.95411, 1.15724, -7.42316)
+
+[node name="CapMushroom" parent="." instance=ExtResource("2_7pl7x")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -6.80712, 1.15724, -6.28559)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.692421, -0.00815853, 0.721447, 3.05076e-10, 0.999936, 0.0113078, -0.721493, -0.00782978, 0.692377, 7.67447, 8.01294, 14.5425)
+fov = 49.6607
+
+[node name="Env" parent="." instance=ExtResource("1_bj5yx")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1373.11, 0, -1454.16, 0, 10, 0, 1454.16, 0, 1373.11, -4.96852, -3.65359, -7.67167)
+mesh = SubResource("BoxMesh_r8aoy")
+
+[node name="MainMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_7fcn0")
+
+[node name="CreditsButton" type="Button" parent="MainMenu"]
+unique_name_in_owner = true
+offset_left = 26.0
+offset_top = 476.0
+offset_right = 154.0
+offset_bottom = 512.0
+theme_override_font_sizes/font_size = 20
+text = "View Credits
+"
+
+[node name="Button" type="Button" parent="MainMenu"]
+offset_left = 24.0
+offset_top = 521.0
+offset_right = 378.0
+offset_bottom = 621.0
+theme_override_font_sizes/font_size = 60
+text = "PLAY"
+
+[node name="Instructions" type="RichTextLabel" parent="MainMenu"]
+unique_name_in_owner = true
+offset_left = 21.0
+offset_top = 190.0
+offset_right = 526.0
+offset_bottom = 464.0
+theme_override_font_sizes/normal_font_size = 24
+text = "Instructions:
+
+This is a mushroom-harvesting memory game. First you must analyze a collection of mushrooms. Afterwards you must search for matching mushrooms, and collect them.
+
+Tips:
+ - Inspect Mushrooms carefully
+ - Check the shape, stem, cap, gills, and rim 
+ - The game will get progressively harder"
+
+[node name="Credits" type="RichTextLabel" parent="MainMenu"]
+unique_name_in_owner = true
+offset_left = 22.0
+offset_top = 190.0
+offset_right = 555.0
+offset_bottom = 467.0
+theme_override_font_sizes/normal_font_size = 27
+text = "Credits:
+
+Creator: SirLich
+
+Programs: Godot, Blender, Material Maker, Krita
+
+Libraries and Assets:
+ - Germania Shadow Font
+ - Silent Reaction Font by Jonathan Harris"
+
+[node name="Title" type="Label" parent="MainMenu"]
+offset_left = 26.0
+offset_top = 29.0
+offset_right = 974.0
+offset_bottom = 137.0
+theme_override_fonts/font = ExtResource("7_ia7dj")
+theme_override_font_sizes/font_size = 79
+text = "mushroom harvest midnight"
+
+[connection signal="pressed" from="MainMenu/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MainMenu/Button" to="." method="_on_button_pressed"]

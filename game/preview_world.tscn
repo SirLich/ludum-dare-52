@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=3 uid="uid://b3037fr2ytkjb"]
+
+[ext_resource type="PackedScene" uid="uid://ginuefs302ow" path="res://env.tscn" id="1_28p7m"]
+[ext_resource type="Script" path="res://game/preview_world.gd" id="1_ny1mb"]
+[ext_resource type="PackedScene" uid="uid://b06ogdp4cxykn" path="res://game/world.tscn" id="2_h2j57"]
+[ext_resource type="PackedScene" uid="uid://becr0j4etdl1k" path="res://preview_camera.tscn" id="3_yb6xq"]
+[ext_resource type="PackedScene" uid="uid://cdg0qw5s1uqll" path="res://components/mushroom_position.tscn" id="4_54xf2"]
+[ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="4_a6r4n"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_npwyr"]
+
+[node name="PreviewWorld" type="Node3D"]
+script = ExtResource("1_ny1mb")
+playScene = ExtResource("2_h2j57")
+
+[node name="Env" parent="." instance=ExtResource("1_28p7m")]
+unique_name_in_owner = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1882.0
+offset_top = 1211.0
+offset_right = 1922.0
+offset_bottom = 1251.0
+theme = ExtResource("4_a6r4n")
+
+[node name="Button" type="Button" parent="Control"]
+offset_left = -950.0
+offset_top = -642.0
+offset_right = -749.0
+offset_bottom = -573.0
+theme_override_font_sizes/font_size = 44
+text = "Continue"
+
+[node name="Label" type="Label" parent="Control"]
+offset_left = -1271.0
+offset_top = -601.0
+offset_right = -967.0
+offset_bottom = -570.0
+theme_override_font_sizes/font_size = 26
+text = "Inspect each mushroom before continuing:"
+
+[node name="PreviewCamera" parent="." instance=ExtResource("3_yb6xq")]
+transform = Transform3D(0.612898, 0.296327, 0.732494, -0.0143268, 0.931032, -0.364657, -0.790032, 0.213003, 0.574873, 0.442627, 0, 0.494128)
+
+[node name="MushroomPosition" parent="." instance=ExtResource("4_54xf2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.0278, -1.59259, -5.81377)
+
+[node name="MushroomPosition2" parent="." instance=ExtResource("4_54xf2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3597, -1.59259, -9.82195)
+
+[node name="MushroomPosition3" parent="." instance=ExtResource("4_54xf2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1828, -1.59258, -13.9067)
+
+[node name="MushroomPosition4" parent="." instance=ExtResource("4_54xf2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.1143, -1.59258, -17.733)
+
+[node name="MushroomPosition5" parent="." instance=ExtResource("4_54xf2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.3871, -1.59258, -21.5694)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1373.11, 0, -1454.16, 0, 10, 0, 1454.16, 0, 1373.11, -4.96852, -6.75665, -7.67167)
+mesh = SubResource("BoxMesh_npwyr")
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

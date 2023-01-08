@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://pyian8rpgide"]
+
+[ext_resource type="PackedScene" uid="uid://biwb1b8of8qo5" path="res://models/rock1.glb" id="1_0h5bq"]
+[ext_resource type="Material" uid="uid://bq7vecl0wlsa5" path="res://materials/RedDots/RedDots.tres" id="2_47euy"]
+[ext_resource type="Material" uid="uid://dnoblwyw6ft5l" path="res://materials/Test/Test.tres" id="2_xxso0"]
+[ext_resource type="ArrayMesh" uid="uid://dd7ohf6251ohg" path="res://raw_meshes/rock_1_raw.res" id="3_cyu8a"]
+[ext_resource type="PackedScene" uid="uid://duelnspk8e3u8" path="res://models/rock2.glb" id="5_d3snl"]
+
+[node name="rock1" instance=ExtResource("1_0h5bq")]
+
+[node name="Quad Sphere" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0589576, -0.0309072, 0.919657)
+surface_material_override/0 = ExtResource("2_47euy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.49053, 0, -5.39976)
+mesh = ExtResource("3_cyu8a")
+surface_material_override/0 = ExtResource("2_xxso0")
+
+[node name="rock2" parent="." index="2" instance=ExtResource("5_d3snl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5805, 0, -2.03302)

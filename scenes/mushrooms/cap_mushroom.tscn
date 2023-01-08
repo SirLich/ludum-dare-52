@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://jqxjy6c7khav"]
+
+[ext_resource type="PackedScene" uid="uid://bdoaos7dsckln" path="res://models/CapMushroom.glb" id="1_pmev4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_i0eeq"]
+radius = 0.736764
+height = 2.94426
+
+[node name="CapMushroom" instance=ExtResource("1_pmev4")]
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.19648, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.96603, 0)
+shape = SubResource("CapsuleShape3D_i0eeq")
