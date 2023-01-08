@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://d2sscl7qabx5h"]
+[gd_scene load_steps=26 format=3 uid="uid://d2sscl7qabx5h"]
 
 [ext_resource type="Script" path="res://game/gamestate.gd" id="1_h11nn"]
 [ext_resource type="PackedScene" uid="uid://b2agbylt7ykh0" path="res://scenes/mushrooms/oyster_mushroom.tscn" id="2_0oko6"]
@@ -16,14 +16,15 @@
 [ext_resource type="Material" path="res://materials/Gills2/Gills2.tres" id="9_msrtm"]
 [ext_resource type="Material" path="res://materials/Gills3/Gills3.tres" id="10_27tcw"]
 [ext_resource type="Material" uid="uid://bniacjib3pncm" path="res://materials/Gills4/Gills4.tres" id="11_78x5v"]
-[ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="17_2ct1u"]
 [ext_resource type="PackedScene" uid="uid://cghxbhpv41ec4" path="res://game/game_over.tscn" id="17_yvsyu"]
 [ext_resource type="Texture2D" uid="uid://d1q6u3bd2m15t" path="res://assets/images/mushroom_png.png" id="18_8jeer"]
 [ext_resource type="PackedScene" uid="uid://b3037fr2ytkjb" path="res://game/preview_world.tscn" id="18_lap37"]
 [ext_resource type="Texture2D" uid="uid://lsvoik2ufc26" path="res://assets/images/heart1.png" id="19_3xwpf"]
+[ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="19_byups"]
 [ext_resource type="AudioStream" uid="uid://byauxvt5pdv6a" path="res://assets/sounds/collect.wav" id="22_eq7s7"]
 [ext_resource type="AudioStream" uid="uid://bbr7ki0f126q8" path="res://assets/sounds/lose.wav" id="23_lrwf3"]
 [ext_resource type="AudioStream" uid="uid://cf6fycqp3o2yp" path="res://assets/sounds/button.wav" id="24_a1bm4"]
+[ext_resource type="AudioStream" uid="uid://o746errt2gdq" path="res://assets/sounds/win.wav" id="25_30p6d"]
 
 [node name="Gamestate" type="Node"]
 script = ExtResource("1_h11nn")
@@ -41,10 +42,9 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-theme = ExtResource("17_2ct1u")
+theme = ExtResource("19_byups")
 
 [node name="TextureRect" type="TextureRect" parent="HUD"]
-layout_mode = 1
 offset_left = 1759.0
 offset_top = 32.0
 offset_right = 1849.0
@@ -54,7 +54,6 @@ ignore_texture_size = true
 
 [node name="ScoreAsText" type="RichTextLabel" parent="HUD/TextureRect"]
 unique_name_in_owner = true
-layout_mode = 1
 offset_left = 76.0
 offset_top = 108.0
 offset_right = 343.0
@@ -64,7 +63,6 @@ text = "0/0
 "
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HUD/TextureRect"]
-layout_mode = 1
 offset_left = -33.0
 offset_top = 107.0
 offset_right = 71.0
@@ -73,7 +71,6 @@ theme_override_font_sizes/normal_font_size = 50
 text = "Found: "
 
 [node name="TextureRect2" type="TextureRect" parent="HUD"]
-layout_mode = 1
 offset_left = 56.0
 offset_top = 22.0
 offset_right = 146.0
@@ -83,7 +80,6 @@ ignore_texture_size = true
 
 [node name="LifeAsText" type="RichTextLabel" parent="HUD/TextureRect2"]
 unique_name_in_owner = true
-layout_mode = 1
 offset_left = 67.0
 offset_top = 94.0
 offset_right = 347.0
@@ -92,7 +88,6 @@ theme_override_font_sizes/normal_font_size = 50
 text = "3"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="HUD/TextureRect2"]
-layout_mode = 1
 offset_left = -13.0
 offset_top = 95.0
 offset_right = 91.0
@@ -110,4 +105,4 @@ stream = ExtResource("23_lrwf3")
 stream = ExtResource("24_a1bm4")
 
 [node name="WinSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("24_a1bm4")
+stream = ExtResource("25_30p6d")

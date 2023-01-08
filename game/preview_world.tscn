@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b06ogdp4cxykn" path="res://game/world.tscn" id="2_h2j57"]
 [ext_resource type="PackedScene" uid="uid://becr0j4etdl1k" path="res://preview_camera.tscn" id="3_yb6xq"]
 [ext_resource type="PackedScene" uid="uid://cdg0qw5s1uqll" path="res://components/mushroom_position.tscn" id="4_54xf2"]
-[ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="4_a6r4n"]
+[ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="4_s8ldc"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_npwyr"]
 
@@ -23,7 +23,7 @@ offset_left = 1882.0
 offset_top = 1211.0
 offset_right = 1922.0
 offset_bottom = 1251.0
-theme = ExtResource("4_a6r4n")
+theme = ExtResource("4_s8ldc")
 
 [node name="Button" type="Button" parent="Control"]
 offset_left = -178.0

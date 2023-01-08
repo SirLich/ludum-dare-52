@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://ginuefs302ow" path="res://env.tscn" id="1_6q74v"]
 [ext_resource type="Script" path="res://game/game_over.gd" id="1_kojnr"]
-[ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="2_5nrgp"]
 [ext_resource type="PackedScene" uid="uid://c3v40trfvsil7" path="res://game/main_menu/main_menu.tscn" id="2_l05sf"]
 [ext_resource type="FontFile" uid="uid://k2gc7slwe1mb" path="res://assets/fonts/Moon Flower Bold.ttf" id="3_xdqjr"]
+[ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="4_ycwbt"]
 
 [node name="GameOver" type="Node3D"]
 script = ExtResource("1_kojnr")
@@ -21,7 +21,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-theme = ExtResource("2_5nrgp")
+theme = ExtResource("4_ycwbt")
 
 [node name="Button" type="Button" parent="Control"]
 offset_left = 706.0
