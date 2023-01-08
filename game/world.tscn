@@ -27,6 +27,9 @@ transform = Transform3D(-0.772922, -0.493449, 0.398874, 0, 0.628643, 0.777696, -
 [node name="MushroomPosition14" parent="Positions" instance=ExtResource("10_2yprq")]
 transform = Transform3D(-0.772922, -0.493449, 0.398874, 0, 0.628643, 0.777696, -0.634501, 0.601098, -0.485892, -22.2299, 26.5035, 6.23288)
 
+[node name="MushroomPosition19" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(-0.772922, -0.493449, 0.398874, 0, 0.628643, 0.777696, -0.634501, 0.601098, -0.485892, -22.2299, 34.1123, 6.97389)
+
 [node name="MushroomPosition13" parent="Positions" instance=ExtResource("10_2yprq")]
 transform = Transform3D(-0.772922, -0.493449, 0.398874, -0.596482, 0.779419, -0.191619, -0.216336, -0.386028, -0.896763, -14.2986, 27.4896, -0.113182)
 
@@ -51,6 +54,9 @@ transform = Transform3D(0.985653, 0.168782, 0, -0.168782, 0.985653, 0, 0, 0, 1, 
 [node name="MushroomPosition" parent="Positions" instance=ExtResource("10_2yprq")]
 transform = Transform3D(0.273959, 0, 0.961741, 0, 1, 0, -0.961741, 0, 0.273959, -5.6194, -2.08565, 25.8963)
 
+[node name="MushroomPosition16" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(0.273959, 0, 0.961741, 0, 1, 0, -0.961741, 0, 0.273959, -10.3211, -2.08565, 35.5105)
+
 [node name="MushroomPosition10" parent="Positions" instance=ExtResource("10_2yprq")]
 transform = Transform3D(-0.459967, 0, 0.887936, 0, 1, 0, -0.887936, 0, -0.459967, -5.6194, -0.00212026, 7.52457)
 
@@ -60,8 +66,17 @@ transform = Transform3D(-0.276157, 0, 0.961112, 0, 1, 0, -0.961112, 0, -0.276157
 [node name="MushroomPosition3" parent="Positions" instance=ExtResource("10_2yprq")]
 transform = Transform3D(0.107566, 0, -0.994198, 0, 1, 0, 0.994198, 0, 0.107566, -18.2571, 1.91396, 4.88998)
 
+[node name="MushroomPosition20" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(0.107566, 0, -0.994198, 0, 1, 0, 0.994198, 0, 0.107566, -13.2805, 4.46348, -17.1882)
+
+[node name="MushroomPosition17" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(0.107566, 0, -0.994198, 0.0965332, 0.995275, 0.0104443, 0.9895, -0.0970965, 0.107058, -8.97373, 0.824983, 4.88998)
+
 [node name="MushroomPosition2" parent="Positions" instance=ExtResource("10_2yprq")]
 transform = Transform3D(-0.136355, 0, -0.99066, 0, 1, 0, 0.99066, 0, -0.136355, 6.9903, -3.43908, 3.18427)
+
+[node name="MushroomPosition18" parent="Positions" instance=ExtResource("10_2yprq")]
+transform = Transform3D(-0.136355, 0, -0.99066, 0, 1, 0, 0.99066, 0, -0.136355, 6.9903, -4.73603, 8.74625)
 
 [node name="PreviewCamera" parent="." instance=ExtResource("6_jnuw3")]
 is_main_world = true
@@ -94,6 +109,9 @@ omni_attenuation = 0.482969
 transform = Transform3D(1.12878, 0, 0.987857, 0, 1.5, 0, -0.987857, 0, 1.12878, -22.0784, 0, 4.98864)
 
 [node name="Terrain" parent="." instance=ExtResource("6_gthwp")]
+transform = Transform3D(0.437916, 0, -0.899016, 0, 1, 0, 0.899016, 0, 0.437916, -25.8905, 0, 0)
+
+[node name="Terrain2" parent="." instance=ExtResource("6_gthwp")]
 transform = Transform3D(0.437916, 0, -0.899016, 0, 1, 0, 0.899016, 0, 0.437916, -25.8905, 0, 0)
 
 [node name="rock5" parent="." instance=ExtResource("9_glqiv")]

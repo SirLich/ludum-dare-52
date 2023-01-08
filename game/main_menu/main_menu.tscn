@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b2agbylt7ykh0" path="res://scenes/mushrooms/oyster_mushroom.tscn" id="1_q4rvp"]
 [ext_resource type="PackedScene" uid="uid://jqxjy6c7khav" path="res://scenes/mushrooms/cap_mushroom.tscn" id="2_7pl7x"]
 [ext_resource type="PackedScene" uid="uid://b3037fr2ytkjb" path="res://game/preview_world.tscn" id="2_pqvxd"]
-[ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="6_7fcn0"]
+[ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="6_6l5yy"]
 [ext_resource type="FontFile" uid="uid://k2gc7slwe1mb" path="res://assets/fonts/Moon Flower Bold.ttf" id="7_ia7dj"]
 [ext_resource type="Texture2D" uid="uid://d1q6u3bd2m15t" path="res://assets/images/mushroom_png.png" id="8_ml6xg"]
 
@@ -42,11 +42,10 @@ offset_right = 1.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("6_7fcn0")
+theme = ExtResource("6_6l5yy")
 
 [node name="CreditsButton" type="Button" parent="MainMenu"]
 unique_name_in_owner = true
-layout_mode = 0
 offset_left = 38.0
 offset_top = 900.0
 offset_right = 166.0
@@ -56,7 +55,6 @@ text = "View Credits
 "
 
 [node name="Button" type="Button" parent="MainMenu"]
-layout_mode = 0
 offset_left = 35.0
 offset_top = 952.0
 offset_right = 389.0
@@ -66,7 +64,6 @@ text = "PLAY"
 
 [node name="Instructions" type="RichTextLabel" parent="MainMenu"]
 unique_name_in_owner = true
-layout_mode = 0
 offset_left = 45.0
 offset_top = 279.0
 offset_right = 963.0
@@ -82,7 +79,6 @@ Tips:
 [node name="Credits" type="RichTextLabel" parent="MainMenu"]
 unique_name_in_owner = true
 visible = false
-layout_mode = 0
 offset_left = 51.0
 offset_top = 281.0
 offset_right = 850.0
@@ -97,7 +93,6 @@ Libraries and Assets:
  - Moon Flower Font"
 
 [node name="Title" type="Label" parent="MainMenu"]
-layout_mode = 0
 offset_left = 46.0
 offset_top = 91.0
 offset_right = 994.0
@@ -107,7 +102,6 @@ theme_override_font_sizes/font_size = 120
 text = "midnight harvest"
 
 [node name="TextureRect" type="TextureRect" parent="MainMenu"]
-layout_mode = 0
 offset_left = 618.0
 offset_top = 56.0
 offset_right = 789.0
