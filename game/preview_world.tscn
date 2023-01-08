@@ -26,20 +26,12 @@ offset_bottom = 1251.0
 theme = ExtResource("4_a6r4n")
 
 [node name="Button" type="Button" parent="Control"]
-offset_left = -950.0
-offset_top = -642.0
-offset_right = -749.0
-offset_bottom = -573.0
+offset_left = -178.0
+offset_top = -218.0
+offset_right = 23.0
+offset_bottom = -149.0
 theme_override_font_sizes/font_size = 44
 text = "Continue"
-
-[node name="Label" type="Label" parent="Control"]
-offset_left = -1271.0
-offset_top = -601.0
-offset_right = -967.0
-offset_bottom = -570.0
-theme_override_font_sizes/font_size = 26
-text = "Inspect each mushroom before continuing:"
 
 [node name="PreviewCamera" parent="." instance=ExtResource("3_yb6xq")]
 transform = Transform3D(0.612898, 0.296327, 0.732494, -0.0143268, 0.931032, -0.364657, -0.790032, 0.213003, 0.574873, 0.442627, 0, 0.494128)

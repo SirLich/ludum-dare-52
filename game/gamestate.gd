@@ -6,12 +6,12 @@ extends Node
 @export var gill_materials : Array[BaseMaterial3D] = []
 @export var stem_materials : Array[BaseMaterial3D] = []
 
-var mushrooms = []
-var level = 0
-
+@onready var mushrooms = []
+@onready var level = 0
+@onready var found_mushrooms = 0
 
 var mushrooms_by_level = [
-	3,
+	1,
 	2,
 	3,
 	3,
@@ -32,6 +32,15 @@ var extra_by_level = [
 	3
 ]
 
+func attempt_collect_mushroom(collected_mushroom):
+	if collected_mushroom in mushrooms:
+		print("YES")
+	else:
+		print("NO")
+	
+func num_mushrooms_to_find():
+	return mushrooms_by_level[level]
+	
 func generate_random_mushroom():
 	var proto : PackedScene = mushroom_models.pick_random()
 	var instance = proto.instantiate()
@@ -47,7 +56,7 @@ func generate_random_mushroom():
 	
 func generate_mushrooms():
 	mushrooms = []
-	for i in range(mushrooms_by_level[level]):
+	for i in range(num_mushrooms_to_find()):
 		mushrooms.append(generate_random_mushroom())
 	
 func place_mushrooms(place_extra):

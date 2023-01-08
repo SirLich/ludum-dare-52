@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3v40trfvsil7"]
+[gd_scene load_steps=10 format=3 uid="uid://c3v40trfvsil7"]
 
 [ext_resource type="PackedScene" uid="uid://ginuefs302ow" path="res://env.tscn" id="1_bj5yx"]
 [ext_resource type="Script" path="res://game/main_menu/main_menu.gd" id="1_bk7e3"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b3037fr2ytkjb" path="res://game/preview_world.tscn" id="2_pqvxd"]
 [ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="6_7fcn0"]
 [ext_resource type="FontFile" uid="uid://k2gc7slwe1mb" path="res://assets/fonts/Moon Flower Bold.ttf" id="7_ia7dj"]
+[ext_resource type="Texture2D" uid="uid://cl731p13bbpbg" path="res://assets/images/mushroom_logo.png" id="8_kvg7n"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_r8aoy"]
 
@@ -45,30 +46,29 @@ theme = ExtResource("6_7fcn0")
 
 [node name="CreditsButton" type="Button" parent="MainMenu"]
 unique_name_in_owner = true
-offset_left = 26.0
-offset_top = 476.0
-offset_right = 154.0
-offset_bottom = 512.0
-theme_override_font_sizes/font_size = 20
+offset_left = 38.0
+offset_top = 900.0
+offset_right = 166.0
+offset_bottom = 936.0
+theme_override_font_sizes/font_size = 30
 text = "View Credits
 "
 
 [node name="Button" type="Button" parent="MainMenu"]
-offset_left = 24.0
-offset_top = 521.0
-offset_right = 378.0
-offset_bottom = 621.0
+offset_left = 35.0
+offset_top = 952.0
+offset_right = 389.0
+offset_bottom = 1052.0
 theme_override_font_sizes/font_size = 60
 text = "PLAY"
 
 [node name="Instructions" type="RichTextLabel" parent="MainMenu"]
 unique_name_in_owner = true
-visible = false
-offset_left = 35.0
-offset_top = 130.0
-offset_right = 719.0
-offset_bottom = 465.0
-theme_override_font_sizes/normal_font_size = 35
+offset_left = 45.0
+offset_top = 279.0
+offset_right = 963.0
+offset_bottom = 835.0
+theme_override_font_sizes/normal_font_size = 50
 text = "This is a mushroom-harvesting memory game. First you must analyze a collection of mushrooms. Afterwards you must search for matching mushrooms, and collect them.
 
 Tips:
@@ -78,11 +78,12 @@ Tips:
 
 [node name="Credits" type="RichTextLabel" parent="MainMenu"]
 unique_name_in_owner = true
-offset_left = 22.0
-offset_top = 127.0
-offset_right = 800.0
-offset_bottom = 467.0
-theme_override_font_sizes/normal_font_size = 34
+visible = false
+offset_left = 51.0
+offset_top = 281.0
+offset_right = 850.0
+offset_bottom = 792.0
+theme_override_font_sizes/normal_font_size = 50
 text = "Creator: SirLich
 
 Programs: Godot, Blender, Material Maker, Krita
@@ -92,13 +93,21 @@ Libraries and Assets:
  - Silent Reaction Font by Jonathan Harris"
 
 [node name="Title" type="Label" parent="MainMenu"]
-offset_left = 26.0
-offset_top = 29.0
-offset_right = 974.0
-offset_bottom = 137.0
+offset_left = 46.0
+offset_top = 91.0
+offset_right = 994.0
+offset_bottom = 220.0
 theme_override_fonts/font = ExtResource("7_ia7dj")
-theme_override_font_sizes/font_size = 79
-text = "mushroom harvest midnight"
+theme_override_font_sizes/font_size = 120
+text = "midnight harvest"
+
+[node name="TextureRect" type="TextureRect" parent="MainMenu"]
+offset_left = 618.0
+offset_top = 56.0
+offset_right = 789.0
+offset_bottom = 227.0
+texture = ExtResource("8_kvg7n")
+ignore_texture_size = true
 
 [connection signal="pressed" from="MainMenu/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MainMenu/Button" to="." method="_on_button_pressed"]

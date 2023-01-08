@@ -66,7 +66,7 @@ transform = Transform3D(0.107566, 0, -0.994198, 0, 1, 0, 0.994198, 0, 0.107566, 
 transform = Transform3D(-0.136355, 0, -0.99066, 0, 1, 0, 0.99066, 0, -0.136355, 6.9903, -3.43908, 3.18427)
 
 [node name="PreviewCamera" parent="." instance=ExtResource("6_jnuw3")]
-show_instructions_b = true
+is_main_world = true
 
 [node name="lamp" parent="." instance=ExtResource("3_wwmjy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.2137, 0, 40.6209)
@@ -128,27 +128,30 @@ offset_bottom = 40.0
 theme = ExtResource("10_ny4ym")
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
-offset_left = 1041.0
-offset_top = 19.0
-offset_right = 1131.0
-offset_bottom = 109.0
+layout_mode = 0
+offset_left = 1759.0
+offset_top = 32.0
+offset_right = 1849.0
+offset_bottom = 122.0
 texture = ExtResource("11_f0u7b")
 ignore_texture_size = true
 
 [node name="ScoreAsText" type="RichTextLabel" parent="Control"]
 unique_name_in_owner = true
-offset_left = 1065.0
-offset_top = 111.0
-offset_right = 1332.0
-offset_bottom = 159.0
-theme_override_font_sizes/normal_font_size = 38
+layout_mode = 0
+offset_left = 1835.0
+offset_top = 140.0
+offset_right = 2102.0
+offset_bottom = 188.0
+theme_override_font_sizes/normal_font_size = 50
 text = "0/0
 "
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
-offset_left = 990.0
-offset_top = 110.0
-offset_right = 1075.0
-offset_bottom = 158.0
-theme_override_font_sizes/normal_font_size = 38
+layout_mode = 0
+offset_left = 1726.0
+offset_top = 139.0
+offset_right = 1830.0
+offset_bottom = 208.0
+theme_override_font_sizes/normal_font_size = 50
 text = "Found: "

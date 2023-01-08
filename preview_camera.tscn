@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://becr0j4etdl1k"]
+[gd_scene load_steps=9 format=3 uid="uid://becr0j4etdl1k"]
 
 [ext_resource type="Script" path="res://preview_camera.gd" id="1_f11p4"]
 [ext_resource type="Script" path="res://game/preview_handler.gd" id="1_r5rp4"]
@@ -6,6 +6,8 @@
 [ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="3_3sx1t"]
 [ext_resource type="Texture2D" uid="uid://jqx55880lskv" path="res://assets/images/mouse_left.png" id="4_moopa"]
 [ext_resource type="Texture2D" uid="uid://dgu33t2ptdas8" path="res://assets/images/mouse_right.png" id="5_lyvst"]
+[ext_resource type="Texture2D" uid="uid://b0b45ndctho5c" path="res://assets/images/mouse_move_tutorial.png" id="7_je4fb"]
+[ext_resource type="Texture2D" uid="uid://pp0eqfef4idy" path="res://assets/images/mouse_tutorial.png" id="8_ig5b2"]
 
 [node name="PreviewCamera" type="Camera3D"]
 transform = Transform3D(0.467819, 0.0161286, 0.883677, -4.2338e-10, 0.999834, -0.0182486, -0.883824, 0.00853706, 0.467741, 29.7342, 14.2102, 28.7066)
@@ -17,45 +19,87 @@ transform = Transform3D(1, -3.14787e-07, 1.19209e-07, -2.79397e-09, 1, -1.71829e
 gizmo_extents = 0.26
 script = ExtResource("1_r5rp4")
 PREVIEW_SCALE_FACTOR = 300
-DEFAULT_PREVIEW_FOV = 60
 
 [node name="PreviewLight" parent="." instance=ExtResource("2_rvt5t")]
 
-[node name="Instructions" type="Control" parent="."]
+[node name="Tut0" type="Control" parent="."]
+unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("3_3sx1t")
 
-[node name="TextureRect" type="TextureRect" parent="Instructions"]
-offset_left = 69.0
-offset_top = 211.0
-offset_right = 183.0
-offset_bottom = 325.0
+[node name="TextureRect" type="TextureRect" parent="Tut0"]
+offset_left = 171.0
+offset_top = 383.0
+offset_right = 285.0
+offset_bottom = 497.0
 texture = ExtResource("4_moopa")
 ignore_texture_size = true
 
-[node name="Label" type="Label" parent="Instructions/TextureRect"]
-offset_left = -35.0
-offset_top = 125.0
-offset_right = 216.0
-offset_bottom = 162.0
-theme_override_font_sizes/font_size = 32
+[node name="Label" type="Label" parent="Tut0/TextureRect"]
+offset_left = -123.0
+offset_top = 148.0
+offset_right = 268.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 50
 text = "Left Click: Reject Mushroom"
 
-[node name="TextureRect2" type="TextureRect" parent="Instructions"]
-offset_left = 941.0
-offset_top = 228.0
-offset_right = 1055.0
-offset_bottom = 342.0
+[node name="TextureRect2" type="TextureRect" parent="Tut0"]
+offset_left = 1559.0
+offset_top = 407.0
+offset_right = 1673.0
+offset_bottom = 521.0
 texture = ExtResource("5_lyvst")
 ignore_texture_size = true
 
-[node name="Label" type="Label" parent="Instructions/TextureRect2"]
-offset_left = -85.0
-offset_top = 121.0
-offset_right = 187.0
-offset_bottom = 158.0
-theme_override_font_sizes/font_size = 32
+[node name="Label" type="Label" parent="Tut0/TextureRect2"]
+offset_left = -123.0
+offset_top = 147.0
+offset_right = 302.0
+offset_bottom = 203.0
+theme_override_font_sizes/font_size = 50
 text = "Right Click: Collect Mushroom"
+
+[node name="MoveInstructions" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("3_3sx1t")
+
+[node name="Tut1" type="TextureRect" parent="MoveInstructions"]
+unique_name_in_owner = true
+offset_left = 187.0
+offset_top = 46.0
+offset_right = 529.0
+offset_bottom = 388.0
+texture = ExtResource("8_ig5b2")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="MoveInstructions/Tut1"]
+offset_left = -153.0
+offset_top = 137.0
+offset_right = 159.0
+offset_bottom = 193.0
+theme_override_font_sizes/font_size = 50
+text = "Inspect reach mushroom"
+
+[node name="Tut2" type="TextureRect" parent="MoveInstructions"]
+unique_name_in_owner = true
+offset_left = 67.0
+offset_top = 786.0
+offset_right = 269.0
+offset_bottom = 988.0
+texture = ExtResource("7_je4fb")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="MoveInstructions/Tut2"]
+offset_left = -33.0
+offset_top = 215.0
+offset_right = 279.0
+offset_bottom = 271.0
+theme_override_font_sizes/font_size = 50
+text = "Move Mouse to Inspect"

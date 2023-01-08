@@ -6,11 +6,6 @@ extends Node3D
 # Exports
 @export var ray_length = 1000
 @export var PREVIEW_SCALE_FACTOR = 200
-@export var MAX_FOV = 200
-@export var MIN_FOV = 10
-@export var FOV_SPEED = 5
-@export var DEFAULT_FOV = 75
-@export var DEFAULT_PREVIEW_FOV = 50
 
 # Local State
 var original_preview_transform = Transform3D()
@@ -19,11 +14,32 @@ var is_previewing = false
 
 func _ready():
 	is_previewing = false
+	%MoveInstructions.visible = true
+	%Tut0.visible = true
 	show_instructions(false)
 
-func show_instructions(value):
-	get_parent().get_node("Instructions").visible = value
+func show_instructions(is_previewing):
+	if is_previewing:
+		if camera.is_main_world:
+			%Tut0.visible = true
+			%Tut1.visible = false
+			%Tut2.visible = false
+		else:
+			%Tut0.visible = false
+			%Tut1.visible = false
+			%Tut2.visible = true
+	else:
+		if camera.is_main_world:
+			%Tut0.visible = false
+			%Tut1.visible = false
+			%Tut2.visible = false
+		else:
+			%Tut0.visible = false
+			%Tut1.visible = true
+			%Tut2.visible = false
+	
 		
+	
 func _process(delta):
 	pass
 
@@ -49,33 +65,34 @@ func _input(event):
 		if event is InputEventMouseMotion:
 			preview_object.rotate_z(-event.relative.y / PREVIEW_SCALE_FACTOR)
 			preview_object.rotate_y(event.relative.x / PREVIEW_SCALE_FACTOR)
-		
-		# Scrolling
-		if event is InputEventMouseButton:
-			if event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed:
-				camera.fov = min(camera.fov + FOV_SPEED, MAX_FOV)
-			if event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed:
-				camera.fov = max(camera.fov - FOV_SPEED, MIN_FOV)
 
 	# Handle Mouse Input
 	if event is InputEventMouseButton and event.pressed:
 		if is_previewing:
+			# Collection Results:
+			if event.button_index == 1: # Left Click
+				preview_object.global_transform = original_preview_transform
+				
+			elif event.button_index == 2 and camera.is_main_world: # Right Click
+				Gamestate.attempt_collect_mushroom(preview_object)
+				preview_object.queue_free()
+			
+			# Reset Data
+			if preview_object:
+				preview_object.global_transform = original_preview_transform
+				
 			is_previewing = false
 			show_instructions(false)
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			preview_object.global_transform = original_preview_transform
-			camera.fov = DEFAULT_FOV
-			# env.environment.volumetric_fog_density = 0.0347
+
 		else:
 			if event.button_index == 1:
 				var object = get_clicked_object()
 				if object:
-					show_instructions(camera.show_instructions_b)
+					show_instructions(true)
 					is_previewing = true
 					Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 					preview_object = object.collider.get_parent()
 					original_preview_transform = preview_object.global_transform
 					print(original_preview_transform)
 					preview_object.global_transform = get_preview_transform()
-					camera.fov = DEFAULT_PREVIEW_FOV
-					# env.environment.volumetric_fog_density = 0.0347 * 2
