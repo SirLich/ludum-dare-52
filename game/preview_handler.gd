@@ -89,6 +89,7 @@ func _input(event):
 			if event.button_index == 1:
 				var object = get_clicked_object()
 				if object:
+					Gamestate.play_sound_button()
 					show_instructions(true)
 					is_previewing = true
 					Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

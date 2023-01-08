@@ -33,6 +33,24 @@ offset_bottom = -149.0
 theme_override_font_sizes/font_size = 44
 text = "Continue"
 
+[node name="Label" type="Label" parent="Control"]
+offset_left = -433.0
+offset_top = -215.0
+offset_right = -314.0
+offset_bottom = -147.0
+theme_override_font_sizes/font_size = 62
+text = "Level: "
+
+[node name="LevelsToPlay" type="Label" parent="Control"]
+unique_name_in_owner = true
+offset_left = -314.0
+offset_top = -216.0
+offset_right = -195.0
+offset_bottom = -148.0
+theme_override_font_sizes/font_size = 62
+text = "0/0
+"
+
 [node name="PreviewCamera" parent="." instance=ExtResource("3_yb6xq")]
 transform = Transform3D(0.612898, 0.296327, 0.732494, -0.0143268, 0.931032, -0.364657, -0.790032, 0.213003, 0.574873, 0.442627, 0, 0.494128)
 

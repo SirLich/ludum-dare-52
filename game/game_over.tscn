@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://cghxbhpv41ec4"]
+
+[ext_resource type="PackedScene" uid="uid://ginuefs302ow" path="res://env.tscn" id="1_6q74v"]
+[ext_resource type="Script" path="res://game/game_over.gd" id="1_kojnr"]
+[ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="2_5nrgp"]
+[ext_resource type="PackedScene" uid="uid://c3v40trfvsil7" path="res://game/main_menu/main_menu.tscn" id="2_l05sf"]
+[ext_resource type="FontFile" uid="uid://k2gc7slwe1mb" path="res://assets/fonts/Moon Flower Bold.ttf" id="3_xdqjr"]
+
+[node name="GameOver" type="Node3D"]
+script = ExtResource("1_kojnr")
+main_menu_scene = ExtResource("2_l05sf")
+
+[node name="Env" parent="." instance=ExtResource("1_6q74v")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.341849, 0.4369, 0.83202, 0.0711608, 0.870782, -0.486492, -0.937057, 0.225514, 0.266586, -0.35422, 0, 0)
+fov = 35.9217
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("2_5nrgp")
+
+[node name="Button" type="Button" parent="Control"]
+offset_left = 706.0
+offset_top = 864.0
+offset_right = 1279.0
+offset_bottom = 1003.0
+theme_override_font_sizes/font_size = 120
+text = "Main Menu"
+
+[node name="Label" type="Label" parent="Control"]
+offset_left = 648.0
+offset_top = 182.0
+offset_right = 1286.0
+offset_bottom = 463.0
+theme_override_fonts/font = ExtResource("3_xdqjr")
+theme_override_font_sizes/font_size = 254
+text = "YOU LOSE"
+
+[node name="Collected" type="Label" parent="Control"]
+offset_left = 675.0
+offset_top = 529.0
+offset_right = 1253.0
+offset_bottom = 729.0
+theme_override_fonts/font = ExtResource("3_xdqjr")
+theme_override_font_sizes/font_size = 156
+text = "Collected:
+"
+
+[node name="CollectScoreLabel" type="Label" parent="Control/Collected"]
+unique_name_in_owner = true
+offset_left = 501.0
+offset_top = -2.0
+offset_right = 656.0
+offset_bottom = 198.0
+theme_override_fonts/font = ExtResource("3_xdqjr")
+theme_override_font_sizes/font_size = 156
+text = "10
+"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b3037fr2ytkjb" path="res://game/preview_world.tscn" id="2_pqvxd"]
 [ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="6_7fcn0"]
 [ext_resource type="FontFile" uid="uid://k2gc7slwe1mb" path="res://assets/fonts/Moon Flower Bold.ttf" id="7_ia7dj"]
-[ext_resource type="Texture2D" uid="uid://cl731p13bbpbg" path="res://assets/images/mushroom_logo.png" id="8_kvg7n"]
+[ext_resource type="Texture2D" uid="uid://d1q6u3bd2m15t" path="res://assets/images/mushroom_png.png" id="8_ml6xg"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_r8aoy"]
 
@@ -106,7 +106,7 @@ offset_left = 618.0
 offset_top = 56.0
 offset_right = 789.0
 offset_bottom = 227.0
-texture = ExtResource("8_kvg7n")
+texture = ExtResource("8_ml6xg")
 ignore_texture_size = true
 
 [connection signal="pressed" from="MainMenu/CreditsButton" to="." method="_on_credits_button_pressed"]

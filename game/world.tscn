@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b06ogdp4cxykn"]
+[gd_scene load_steps=10 format=3 uid="uid://b06ogdp4cxykn"]
 
 [ext_resource type="Script" path="res://game/world.gd" id="1_7blre"]
 [ext_resource type="PackedScene" uid="uid://c3yaoilcarlp2" path="res://models/lamp.glb" id="3_wwmjy"]
@@ -9,8 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://b0lbrenyhxye2" path="res://models/stick.glb" id="8_3i7n1"]
 [ext_resource type="PackedScene" uid="uid://djfoce6ux7wti" path="res://models/rock2.glb" id="9_glqiv"]
 [ext_resource type="PackedScene" uid="uid://cdg0qw5s1uqll" path="res://components/mushroom_position.tscn" id="10_2yprq"]
-[ext_resource type="Theme" uid="uid://df3qnj10nudtd" path="res://assets/theme.tres" id="10_ny4ym"]
-[ext_resource type="Texture2D" uid="uid://d1q6u3bd2m15t" path="res://assets/images/mushroom_png.png" id="11_f0u7b"]
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_7blre")
@@ -119,39 +117,3 @@ light_color = Color(0.988235, 0.988235, 0.964706, 1)
 light_energy = 0.0
 light_volumetric_fog_energy = 0.0
 shadow_bias = 0.718
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-theme = ExtResource("10_ny4ym")
-
-[node name="TextureRect" type="TextureRect" parent="Control"]
-layout_mode = 0
-offset_left = 1759.0
-offset_top = 32.0
-offset_right = 1849.0
-offset_bottom = 122.0
-texture = ExtResource("11_f0u7b")
-ignore_texture_size = true
-
-[node name="ScoreAsText" type="RichTextLabel" parent="Control"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 1835.0
-offset_top = 140.0
-offset_right = 2102.0
-offset_bottom = 188.0
-theme_override_font_sizes/normal_font_size = 50
-text = "0/0
-"
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
-layout_mode = 0
-offset_left = 1726.0
-offset_top = 139.0
-offset_right = 1830.0
-offset_bottom = 208.0
-theme_override_font_sizes/normal_font_size = 50
-text = "Found: "

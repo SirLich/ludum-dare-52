@@ -1,5 +1,6 @@
 extends Node3D
 
 func _ready():
+	Gamestate.generate_mushrooms()
 	Gamestate.place_mushrooms(true)
-	%ScoreAsText.text = str(Gamestate.found_mushrooms)  + "/" + str(Gamestate.num_mushrooms_to_find())
+	Gamestate.start_new_round()
