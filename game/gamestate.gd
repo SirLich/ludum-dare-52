@@ -2,6 +2,9 @@ extends Node
 
 @export var mushroom_models : Array[PackedScene] = []
 @export var cap_materials : Array[BaseMaterial3D] = []
+@export var rim_materials : Array[BaseMaterial3D] = []
+@export var gill_materials : Array[BaseMaterial3D] = []
+@export var stem_materials : Array[BaseMaterial3D] = []
 
 var mushrooms = []
 var level = 0
@@ -35,6 +38,11 @@ func generate_random_mushroom():
 	
 	var mesh : MeshInstance3D = instance.find_child("Plane")
 	mesh.set_surface_override_material(0, cap_materials.pick_random())
+	mesh.set_surface_override_material(1, rim_materials.pick_random())
+	mesh.set_surface_override_material(2, gill_materials.pick_random())
+	mesh.set_surface_override_material(3, stem_materials.pick_random())
+		
+		
 	return instance
 	
 func generate_mushrooms():

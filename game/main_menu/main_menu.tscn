@@ -63,14 +63,13 @@ text = "PLAY"
 
 [node name="Instructions" type="RichTextLabel" parent="MainMenu"]
 unique_name_in_owner = true
-offset_left = 21.0
-offset_top = 190.0
-offset_right = 526.0
-offset_bottom = 464.0
-theme_override_font_sizes/normal_font_size = 24
-text = "Instructions:
-
-This is a mushroom-harvesting memory game. First you must analyze a collection of mushrooms. Afterwards you must search for matching mushrooms, and collect them.
+visible = false
+offset_left = 35.0
+offset_top = 130.0
+offset_right = 719.0
+offset_bottom = 465.0
+theme_override_font_sizes/normal_font_size = 35
+text = "This is a mushroom-harvesting memory game. First you must analyze a collection of mushrooms. Afterwards you must search for matching mushrooms, and collect them.
 
 Tips:
  - Inspect Mushrooms carefully
@@ -80,13 +79,11 @@ Tips:
 [node name="Credits" type="RichTextLabel" parent="MainMenu"]
 unique_name_in_owner = true
 offset_left = 22.0
-offset_top = 190.0
-offset_right = 555.0
+offset_top = 127.0
+offset_right = 800.0
 offset_bottom = 467.0
-theme_override_font_sizes/normal_font_size = 27
-text = "Credits:
-
-Creator: SirLich
+theme_override_font_sizes/normal_font_size = 34
+text = "Creator: SirLich
 
 Programs: Godot, Blender, Material Maker, Krita
 

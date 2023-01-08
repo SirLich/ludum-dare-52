@@ -1,0 +1,151 @@
+{
+	"connections": [
+		{
+			"from": "uniform",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "normal_map2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 4
+		},
+		{
+			"from": "beehive",
+			"from_port": 0,
+			"to": "gaussian_blur",
+			"to_port": 0
+		},
+		{
+			"from": "gaussian_blur",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 2
+		},
+		{
+			"from": "gaussian_blur",
+			"from_port": 0,
+			"to": "normal_map2",
+			"to_port": 0
+		},
+		{
+			"from": "gaussian_blur",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 1
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "@@1210",
+	"node_position": {
+		"x": 0,
+		"y": 0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+				"Godot": "C:/liam/projects/ld52/materials/Cap5/Cap5"
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 107.083336,
+				"y": -34.416668
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1,
+					"b": 1,
+					"g": 1,
+					"r": 1,
+					"type": "Color"
+				},
+				"ao": 1,
+				"depth_scale": 0.5,
+				"emission_energy": 1,
+				"flags_transparent": true,
+				"metallic": 0,
+				"normal": 1,
+				"roughness": 1,
+				"size": 11,
+				"sss": 0
+			},
+			"seed": 0,
+			"seed_locked": false,
+			"type": "material"
+		},
+		{
+			"name": "beehive",
+			"node_position": {
+				"x": -702.361084,
+				"y": 68.861115
+			},
+			"parameters": {
+				"sx": 6,
+				"sy": 4
+			},
+			"seed": 0,
+			"seed_locked": false,
+			"type": "beehive"
+		},
+		{
+			"name": "normal_map2",
+			"node_position": {
+				"x": -261.618042,
+				"y": 226.280502
+			},
+			"parameters": {
+				"buffer": 1,
+				"param2": 0,
+				"size": 10,
+				"strength": 1
+			},
+			"seed": 0,
+			"seed_locked": false,
+			"type": "normal_map2"
+		},
+		{
+			"name": "uniform",
+			"node_position": {
+				"x": -305.368042,
+				"y": -4.969533
+			},
+			"parameters": {
+				"color": {
+					"a": 1,
+					"b": 0.556532,
+					"g": 0.556532,
+					"r": 0.556532,
+					"type": "Color"
+				}
+			},
+			"seed": 0,
+			"seed_locked": false,
+			"type": "uniform"
+		},
+		{
+			"name": "gaussian_blur",
+			"node_position": {
+				"x": -285.229156,
+				"y": 95.377663
+			},
+			"parameters": {
+				"param0": 9,
+				"param1": 12.2,
+				"param2": 0
+			},
+			"seed": 0,
+			"seed_locked": false,
+			"type": "gaussian_blur"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed": 0,
+	"seed_locked": false,
+	"shortdesc": "",
+	"type": "graph"
+}
