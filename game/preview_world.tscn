@@ -26,7 +26,6 @@ offset_bottom = 1251.0
 theme = ExtResource("4_s8ldc")
 
 [node name="Button" type="Button" parent="Control"]
-layout_mode = 0
 offset_left = -178.0
 offset_top = -218.0
 offset_right = 23.0
@@ -35,7 +34,6 @@ theme_override_font_sizes/font_size = 44
 text = "Continue"
 
 [node name="Label" type="Label" parent="Control"]
-layout_mode = 0
 offset_left = -433.0
 offset_top = -215.0
 offset_right = -314.0
@@ -45,7 +43,6 @@ text = "Level: "
 
 [node name="LevelsToPlay" type="Label" parent="Control"]
 unique_name_in_owner = true
-layout_mode = 0
 offset_left = -314.0
 offset_top = -216.0
 offset_right = -195.0
@@ -64,7 +61,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.0278, -1.59259, -5.81377)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.4107, -1.59259, -2.02058)
 
 [node name="MushroomPosition9" parent="." instance=ExtResource("4_54xf2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.4107, -1.59259, -2.02058)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.43953, -1.59259, -34.2663)
 
 [node name="MushroomPosition10" parent="." instance=ExtResource("4_54xf2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.6845, -1.59259, 1.47838)

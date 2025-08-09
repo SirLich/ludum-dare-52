@@ -13,4 +13,5 @@ func _process(delta):
 
 
 func _on_button_pressed():
+	Gamestate.restart_everything()
 	get_tree().change_scene_to_packed(main_menu_scene)

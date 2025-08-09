@@ -24,6 +24,7 @@ offset_bottom = 40.0
 theme = ExtResource("4_ycwbt")
 
 [node name="Button" type="Button" parent="Control"]
+layout_mode = 0
 offset_left = 706.0
 offset_top = 864.0
 offset_right = 1279.0
@@ -32,6 +33,7 @@ theme_override_font_sizes/font_size = 120
 text = "Main Menu"
 
 [node name="Label" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 648.0
 offset_top = 182.0
 offset_right = 1286.0
@@ -41,6 +43,7 @@ theme_override_font_sizes/font_size = 254
 text = "YOU LOSE"
 
 [node name="Collected" type="Label" parent="Control"]
+layout_mode = 0
 offset_left = 675.0
 offset_top = 529.0
 offset_right = 1253.0
@@ -52,6 +55,7 @@ text = "Collected:
 
 [node name="CollectScoreLabel" type="Label" parent="Control/Collected"]
 unique_name_in_owner = true
+layout_mode = 0
 offset_left = 501.0
 offset_top = -2.0
 offset_right = 656.0

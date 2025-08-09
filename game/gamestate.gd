@@ -43,6 +43,13 @@ var extra_by_level = [
 	10
 ]
 
+func restart_everything():
+	mushrooms = []
+	level = 0
+	found_mushrooms = 0
+	health = 3
+	total_score = 0
+	
 func start_new_round():
 	$HUD.visible = true
 	%ScoreAsText.text = str(Gamestate.found_mushrooms)  + "/" + str(Gamestate.num_mushrooms_to_find())

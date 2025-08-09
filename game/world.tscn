@@ -37,7 +37,7 @@ transform = Transform3D(-0.772922, -0.493449, 0.398874, -0.596482, 0.779419, -0.
 transform = Transform3D(1, 0, 0, 0, 0.827953, 0.560798, 0, -0.560798, 0.827953, -20.2611, 12.4246, 3.49087)
 
 [node name="MushroomPosition12" parent="Positions" instance=ExtResource("10_2yprq")]
-transform = Transform3D(0.624275, 0.6468, 0.438098, -0.781205, 0.51687, 0.350092, 4.35666e-09, -0.560798, 0.827953, -22.2169, 25.5744, 2.56824)
+transform = Transform3D(0.624275, 0.6468, 0.438098, -0.781205, 0.51687, 0.350092, 4.35666e-09, -0.560798, 0.827953, -20.6555, 25.5744, 3.24825)
 
 [node name="MushroomPosition4" parent="Positions" instance=ExtResource("10_2yprq")]
 transform = Transform3D(0.384811, 0, -0.922995, 0, 1, 0, 0.922995, 0, 0.384811, -24.2928, 1.77929, 29.9005)

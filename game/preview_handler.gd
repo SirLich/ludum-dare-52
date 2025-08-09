@@ -2,7 +2,7 @@ extends Node3D
 
 # Onready
 @onready var camera : Camera3D = get_parent()
-@onready var env : WorldEnvironment = %Env
+
 # Exports
 @export var ray_length = 1000
 @export var PREVIEW_SCALE_FACTOR = 200
